@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Countdown Timer</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+      }
+
+      .controls {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 30px;
+      }
+
+      #datetime-picker {
+        padding: 6px 10px;
+        font-size: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+
+      button[data-start] {
+        padding: 6px 16px;
+        font-size: 1rem;
+        border: 1px solid #999;
+        border-radius: 4px;
+        background: #f5f5f5;
+        cursor: pointer;
+      }
+
+      button[data-start]:disabled {
+        color: #999;
+        cursor: not-allowed;
+      }
+
+      .timer {
+        display: flex;
+        gap: 20px;
+      }
+
+      .field {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .value {
+        font-size: 4rem;
+        font-weight: bold;
+        line-height: 1;
+      }
+
+      .label {
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: #555;
+        margin-top: 4px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="controls">
+      <input type="text" id="datetime-picker" />
+      <button type="button" data-start disabled>Start</button>
+    </div>
+
+    <div class="timer">
+      <div class="field">
+        <span class="value" data-days>00</span>
+        <span class="label">Days</span>
+      </div>
+      <div class="field">
+        <span class="value" data-hours>00</span>
+        <span class="label">Hours</span>
+      </div>
+      <div class="field">
+        <span class="value" data-minutes>00</span>
+        <span class="label">Minutes</span>
+      </div>
+      <div class="field">
+        <span class="value" data-seconds>00</span>
+        <span class="label">Seconds</span>
+      </div>
+    </div>
+
+    <script type="module" src="./js/1-timer.js"></script>
+  </body>
+</html>
